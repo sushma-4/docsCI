@@ -1,1 +1,15 @@
+version: 2
+jobs:
+  # Define a "check_links" job to be run with Circle
+  check_links:
+    # This is the base environment that Circle will use
+    docker:
+      - image: docker pull ubuntu 
+      
+    steps:
+      - run:
+          name: Output the Version
+          command: |
+            lsb_release -a
+    
 
