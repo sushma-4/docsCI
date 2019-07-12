@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Output the Version
           command: |
-            echo "Running"
+            cat /etc/issue
             
             
 workflows:
