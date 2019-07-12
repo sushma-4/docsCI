@@ -11,5 +11,12 @@ jobs:
           name: Output the Version
           command: |
             lsb_release -a
+            
+            
+workflows:
+  version: 2
+  default:
+    jobs:
+      - check_links
     
 
