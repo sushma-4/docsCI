@@ -13,6 +13,7 @@ jobs:
             
       - run:
           name: Installing Linkchecker
+          command: apt-get install -y
           command: sudo apt-get install linkchecker 
             
             
