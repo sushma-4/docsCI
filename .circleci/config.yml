@@ -4,7 +4,7 @@ jobs:
   check_links:
     # This is the base environment that Circle will use
     docker:
-      - image: docker pull ubuntu 
+      - image: sushma4y/ubuntu:latest 
       
     steps:
       - run:
