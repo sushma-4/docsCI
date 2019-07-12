@@ -9,8 +9,11 @@ jobs:
     steps:
       - run:
           name: Output the Version
-          command: |
-            cat /etc/issue
+          command: cat /etc/issue
+            
+      - run:
+          name: Installing Linkchecker
+          command: linkchecker
             
             
 workflows:
