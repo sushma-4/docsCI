@@ -12,6 +12,8 @@ jobs:
           command: cat /etc/issue
             
       - run: apt-get install linkchecker 
+      - run: sudo apt-get update
+      - run: sudo apt-get install linkchecker
             
             
 workflows:
