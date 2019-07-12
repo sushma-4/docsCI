@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Output the Version
           command: |
-            lsb_release -a
+            echo "Running"
             
             
 workflows:
