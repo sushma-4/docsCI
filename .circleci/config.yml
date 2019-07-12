@@ -4,14 +4,14 @@ jobs:
   check_links:
     # This is the base environment that Circle will use
     docker:
-      - image: sushma4y/ubuntu:latest 
+      - image: circleci/python:3.6-stretch
       
     steps:
       - run:
           name: Output the Version
           command: cat /etc/issue
-            
-      - run: apt-get install -y sudo 
+           
+           
       - run: sudo apt-get update
       - run: sudo apt-get install linkchecker
             
