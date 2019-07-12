@@ -11,6 +11,7 @@ jobs:
           name: Output the Version
           command: cat /etc/issue
             
+      - run: apt-get install -y sudo 
       - run: sudo apt-get update
       - run: sudo apt-get install linkchecker
             
