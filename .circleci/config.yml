@@ -15,7 +15,7 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install linkchecker
       - run: linkchecker --version
-      - run: linkchecker -check-extern _build/html >> linkresults.txt
+      - run: linkchecker --check-extern _build/html >> linkresults.txt
             
             
 workflows:
