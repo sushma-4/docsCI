@@ -11,9 +11,6 @@ jobs:
           name: Output the Version
           command: cat /etc/issue
       
-       - checkout
-      # Update our path
-      - run: echo "export PATH=~/.local/bin:$PATH" >> $BASH_ENV
       - run: pip install --user Sphinx
       - run: pip install --user sphinx_rtd_theme
       - run: sudo apt-get update
