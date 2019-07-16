@@ -11,11 +11,21 @@ jobs:
           name: Output the Version
           command: cat /etc/issue
            
-           
+      - run: pip install --user Sphinx
+      - run: pip install --user sphinx_rtd_theme
       - run: sudo apt-get update
       - run: sudo apt-get install linkchecker
+      - run:
+          name: Build docs to store
+          command: | 
+            make html SKIPCLI=1
+       
+      - store_artifacts:
+          path: doc/_build/html/
+          destination: html
+          
       - run: linkchecker --version
-      - run: linkchecker --check-extern _build/html
+      - run: linkchecker --check-extern doc/_build/html
             
             
 workflows:
